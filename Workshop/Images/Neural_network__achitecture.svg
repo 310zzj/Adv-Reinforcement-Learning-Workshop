@@ -155,4 +155,9 @@
        id="path3775"
        sodipodi:cx="36.36549"
        sodipodi:cy="97.596855"
-       sodipodi:rx
+       sodipodi:rx="40.406101"
+       sodipodi:ry="40.406101"
+       d="m 76.771591,97.596855 a 40.406101,40.406101 0 1 1 -80.8122023,0 40.406101,40.406101 0 1 1 80.8122023,0 z"
+       transform="translate(76.771599,813.34396)" />
+    <path
+       sodipodi:typ
