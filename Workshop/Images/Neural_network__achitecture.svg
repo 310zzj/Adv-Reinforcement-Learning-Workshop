@@ -330,4 +330,11 @@
        d="M 157.03203,333.34037 341.98334,302.27984"
        id="path4443"
        inkscape:connector-type="polyline"
-       inkscape
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#path3773"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end="#path3755"
+       inkscape:connection-end-point="d4"
+       transform="translate(0,308.2677)" />
+    <path
+       style="fill:none;stro
