@@ -716,4 +716,10 @@
        id="path4521"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
-  
+       inkscape:connection-start="#path3791"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end="#path3777"
+       inkscape:connection-end-point="d4"
+       transform="translate(0,308.2677)" />
+    <path
+       style="fill:none;stroke:#00000
