@@ -31,4 +31,16 @@ def bucket_exists(bucket_name):
     return True
 
 
-def 
+def write_json(d, dest):
+    with open(dest, 'w') as cred:
+        json.dump(d, cred)
+
+
+def load_json(dest):
+    with open(dest, 'r') as cred:
+        return json.load(cred)
+
+
+def list_ec2():
+    ec2 = boto3.client('ec2')
+    response = ec2.describe_ins
