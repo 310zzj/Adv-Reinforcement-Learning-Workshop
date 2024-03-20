@@ -53,4 +53,15 @@ def list_ec2():
             if instance['ImageId'] == AMI_ID \
                     and instance['State']['Name'] == 'running':
 
-                running_ws_ips[ins
+                running_ws_ips[instance['InstanceId']] = \
+                    instance['NetworkInterfaces'][0]['Association']['PublicIp']
+
+    print(f'\nFound the running ec2 instances:')
+    print(f'{running_ws_ips}\n')
+
+    return running_ws_ips
+
+
+def download_files(bucket_name, LINK_FOLDER):
+
+    ip_di
