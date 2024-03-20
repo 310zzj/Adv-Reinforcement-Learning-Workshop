@@ -64,4 +64,17 @@ def list_ec2():
 
 def download_files(bucket_name, LINK_FOLDER):
 
-    ip_di
+    ip_dict = list_ec2()
+
+    if Path(TMP_FOLDER).exists():
+        shutil.rmtree(TMP_FOLDER)
+    os.mkdir(TMP_FOLDER)
+
+
+    s3 = boto3.resource('s3')
+    rl_bucket = s3.Bucket(bucket_name)
+
+    # Downloads only files with an ip as name in the bucket
+    for element in rl_bucket.objects.all():
+
+      
