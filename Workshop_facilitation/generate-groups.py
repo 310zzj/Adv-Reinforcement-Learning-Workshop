@@ -43,4 +43,14 @@ def load_json(dest):
 
 def list_ec2():
     ec2 = boto3.client('ec2')
-    response = ec2.describe_ins
+    response = ec2.describe_instances()
+
+    running_ws_ips = {}
+
+    for reservation in response["Reservations"]:
+        for instance in reservation["Instances"]:
+
+            if instance['ImageId'] == AMI_ID \
+                    and instance['State']['Name'] == 'running':
+
+                running_ws_ips[ins
