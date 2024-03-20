@@ -19,4 +19,16 @@ def bucket_exists(bucket_name):
     """Determine whether bucket_name exists and the user has permission to access it
 
     :param bucket_name: string
-    :retu
+    :return: True if the referenced bucket_name exists, otherwise False
+    """
+
+    s3 = boto3.client('s3')
+    try:
+        response = s3.head_bucket(Bucket=bucket_name)
+    except ClientError as e:
+        logging.debug(e)
+        return False
+    return True
+
+
+def 
