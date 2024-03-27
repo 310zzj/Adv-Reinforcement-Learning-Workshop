@@ -83,4 +83,11 @@ def download_files(bucket_name, LINK_FOLDER):
                 element_list[-1])[-1] == '.txt':
             p_ip, _ = os.path.splitext(element_list[-1])
 
-            if p_ip in ip_dict.values(
+            if p_ip in ip_dict.values():
+
+                s3.meta.client.download_file(bucket_name,
+                                             element.key,
+                                             str(Path(TMP_FOLDER).joinpath(
+                                                 element_list[-1])))
+
+    # Save the ip
