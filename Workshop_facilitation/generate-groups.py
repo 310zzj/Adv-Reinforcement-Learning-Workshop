@@ -90,4 +90,17 @@ def download_files(bucket_name, LINK_FOLDER):
                                              str(Path(TMP_FOLDER).joinpath(
                                                  element_list[-1])))
 
-    # Save the ip
+    # Save the ip dict to track last active ec2 instances
+    write_json(ip_dict, IP_DICT_JSON_NAME)
+
+
+def allocate_new_groups():
+
+    ip_active_dict = load_json(IP_DICT_JSON_NAME)
+
+    if Path(GROUP_DICT_NAME).exists():
+        os.remove(Path(GROUP_DICT_NAME))
+
+    group_dict = {}
+
+    group_num
