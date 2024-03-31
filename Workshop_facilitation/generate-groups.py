@@ -103,4 +103,13 @@ def allocate_new_groups():
 
     group_dict = {}
 
-    group_num
+    group_number = 1
+    while True:
+
+        popped_active_ip = ip_active_dict.pop(
+            next(iter(ip_active_dict)))
+        link_temp = ''
+        try:
+            with open(Path(TMP_FOLDER).joinpath(
+                    popped_active_ip + '.txt'), 'r') as link_file:
+                link_temp
