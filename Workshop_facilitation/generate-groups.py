@@ -138,3 +138,12 @@ def update_and_allocate_instances(ip_active_dict):
     # ip_active_dict = load_json(IP_DICT_JSON_NAME)
 
     try:
+        group_dict = load_json(Path(GROUP_DICT_NAME))
+    except IOError:
+        allocate_new_groups()
+        return
+
+    # If any groups no longer has a running EC2 among the active list,
+    # remove the ip and link
+    inactive_list = []
+    for group_n, info_d in group_dict.item
