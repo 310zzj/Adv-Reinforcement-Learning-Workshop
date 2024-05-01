@@ -171,4 +171,14 @@ def test_connection(BUCKET_NAME):
 
     # Check if the bucket exists
     if bucket_exists(BUCKET_NAME):
-        lo
+        logging.info(f'{BUCKET_NAME} exists and you have permission to access it.')
+    else:
+        logging.info(f'{BUCKET_NAME} does not exist or '
+                     f'you do not have permission to access it.')
+
+
+def generate_excel():
+
+    group_dict = load_json(GROUP_DICT_NAME)
+
+    group_df = pd.DataFrame.from_dict(group_dic
