@@ -193,4 +193,16 @@ def clean_up():
         shutil.rmtree(TMP_FOLDER)
     if Path(IP_DICT_JSON_NAME).exists():
         os.remove(IP_DICT_JSON_NAME)
-    if Path(GROUP_DICT_NAM
+    if Path(GROUP_DICT_NAME).exists():
+        os.remove(GROUP_DICT_NAME)
+    if Path(GROUP_EXCEL_NAME).exists():
+        os.remove(GROUP_EXCEL_NAME)
+
+
+if __name__ == '__main__':
+
+    # Assign this value before running the program
+    BUCKET_NAME = 'rl-workshop-bucket'
+    LINK_FOLDER = 'RL-WS-links'
+
+ 
