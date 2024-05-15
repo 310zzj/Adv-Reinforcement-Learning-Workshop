@@ -223,4 +223,9 @@ if __name__ == '__main__':
         test_connection(BUCKET_NAME)
 
     if args['init']:
-        download_files(BUCKET_
+        download_files(BUCKET_NAME, LINK_FOLDER)
+        allocate_new_groups()
+        generate_excel()
+
+    # ip_org_dict = {'i-0345dc555876e6985': '54.174.112.245', 'i-0116da57317bfa93c': '3.87.192.207', 'i-0a2eb4c7cc444b410': '52.23.168.91'}
+    # ip_new_dict = {'i-0345dc555876e69
