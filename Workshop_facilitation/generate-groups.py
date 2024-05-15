@@ -212,4 +212,15 @@ if __name__ == '__main__':
     parser.add_argument('-c', '--clean', type=bool,
                         help='Enable this if you want to clean the entire group setting')
     parser.add_argument('-t', '--test', type=bool,
-                        help=
+                        help='Test the connection to the s3 bucket')
+    args = vars(parser.parse_args())
+
+    if args['clean']:
+        clean_up()
+        print('CLEANED UP')
+
+    if args['test']:
+        test_connection(BUCKET_NAME)
+
+    if args['init']:
+        download_files(BUCKET_
