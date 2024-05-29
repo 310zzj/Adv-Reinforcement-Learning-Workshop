@@ -9,4 +9,17 @@ case "$1" in
     echo "."
     ;;
   stop)
-    echo -n "Stopping vi
+    echo -n "Stopping virtual X frame buffer: Xvfb"
+    start-stop-daemon --stop --quiet --pidfile $PIDFILE
+    echo "."
+    ;;
+  restart)
+    $0 stop
+    $0 start
+    ;;
+  *)
+        echo "Usage: /etc/init.d/xvfb {start|stop|restart}"
+        exit 1
+esac
+
+exit 0
